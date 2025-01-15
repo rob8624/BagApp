@@ -1,0 +1,90 @@
+.container 
+{ 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.container p {
+   
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.bag-container {
+   display: flex;
+   padding-top: 50px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+
+.title {
+    font-size: 20px;
+}
+
+.reset-message {
+    visibility: hidden;
+}
+
+input {
+    width: 50px;
+}
+
+svg {
+    padding-top: 25px;
+}
+
+
+.container label, .stock-container, .intro-container {
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container label span {
+    padding: 15px;
+}
+
+.data-container {
+    display:flex;
+    flex-direction: column;
+}
+
+.stock-level, .stock-value {
+    display: inline-block;
+ }
+
+ .stock-level {
+    font-size: 20px;
+ }
+
+.stock-status {
+    color: green;
+    text-align: centre;
+}
+
+.data-container button {
+    visibility: hidden;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#order-form {
+    visibility: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
