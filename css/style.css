@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
 }
 
 
@@ -16,8 +16,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px;
-   
-    
 }
 
 .container p {
@@ -52,7 +50,7 @@ label {
     visibility: hidden;
 }
 
-input {
+input  {
     width: 50px;
 }
 
@@ -95,15 +93,87 @@ svg {
 }
 
 .form-container {
-    display: flex;
+    display: none; /* Initially hidden */
     justify-content: center;
-    
-}   
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    width: 50%;
+    height: 80%;
+    background: rgba(249, 245, 245, 0.8); /* Semi-transparent background */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+    z-index: 1000; /* Ensure it sits above other content */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
 
+/* When the form is visible, adjust opacity and display */
+.form-container.visible {
+    display: flex; /* Show the form */
+    opacity: 1; /* Make it visible */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+    justify-content: center;
+
+}
+
+.form-container .form-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    background-color: grey;
+    border-radius: 20px; 
+    opacity: 0.8;
+    align-items: center;
+}
+
+.form-message {
+    font-size: 15px;
+    margin: 0px;
+    left: 15px;
+    top:2px;
+    flex-basis: 50%;
+    align-self: flex-start;
+    padding-left: 20px;
+    
+}
 
 
 #order-form {
-    visibility: hidden;
+   display: flex;
+   height: 100%;
+   flex-basis: 50%;
+   width: 100%;
+}
+
+.form-container.visible .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+    gap: 5px;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    
+    
+}
+
+.form-btn {
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+
+#order-form .form-grid label.form-labels {
+    font-size: 30px;
+    color: yellow;
+   
+}
+
+
+
+#order-form input[type=checkbox] {
+   
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -118,10 +188,11 @@ input[type=number]::-webkit-outer-spin-button {
  height: 35px;
 }
 
+
+
 @media screen and (max-width: 600px) {
     label { 
         max-width: 600px;
-        
     }
 
     .title {
@@ -134,11 +205,21 @@ input[type=number]::-webkit-outer-spin-button {
         width: auto;
     }
 
-    input {
+    input .bags-input {
         width: 50%;
         height: 50%;
         text-align: center;
         font-size: 80px;
+    }
+
+    .form-container {
+        width: 90%;
+        height: 80%;
+    }
+
+    .form-container .form-flex-wrapper {
+        height: 90%;
+        width: 90%;
     }
 
    

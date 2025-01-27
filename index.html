@@ -32,7 +32,7 @@
                     </g>
                     </svg>
                 <span id="green-bags-text" class="bags-title">Green Bags</span>
-                <input id="green" type="number" min="0" max="20" class="input" value="20" inputmode='none'></input>
+                <input id="green" type="number" min="0" max="20" class="input bags-input" value="20" inputmode='none'></input>
                 <hr style="width:50%">
                 <div class="data-container">
                     <div>
@@ -72,7 +72,7 @@
                     </g>
                     </svg>
                 <span id="food-bags-text" class="bags-title">Food Bags (white)</span>
-                <input id="food" type="number" min="0" max="40" class="input" value="40" inputmode='none'></input>
+                <input id="food" type="number" min="0" max="40" class="input bags-input" value="40" inputmode='none'></input>
                 <hr style="width:50%">
                 <div class="data-container">
                     <div>
@@ -102,7 +102,7 @@
                     </g>
                     </svg>
                 <span id="pink-bags-text" class="bags-title">Pink Bags</span>
-                <input id="pink" type="number" min="0" max="10" class="input" value="10" inputmode='none'></input>
+                <input id="pink" type="number" min="0" max="10" class="input bags-input" value="10" inputmode='none'></input>
                 <hr style="width:50%">
             <div class="data-container">
                     <div>
@@ -126,7 +126,7 @@
                     </g>
                     </svg>
                 <span id="garden-bags-text" class="bags-title">Garden Bags</span>
-                <input id="garden" type="number" min="0" max="10" class="input" value="10" inputmode='none'></input>
+                <input id="garden" type="number" min="0" max="10" class="input bags-input" value="10" inputmode='none'></input>
                 <hr style="width:50%">
                 <div class="data-container">
                     <div>
@@ -142,16 +142,43 @@
         </div>
 
 </div>
-<div class="form-container">
-    <form id="order-form">
-        <input type="choice">Test</input>
-    </form>
+<div id="form-container" class="form-container">
+    <div class="form-flex-wrapper">
+        
+        <div class="form-message">
+            <h2>Stock Order Form</h2>
+            <p>Use this form to order more stock, plase select the bags needed and click order</p>
+        </div>
+            
+                <form id="order-form">
+                    <div class="form-grid">
+                        <div>
+                            <label for="bag-order-green" class="form-labels">Green</label>
+                            <input id="bag-order-green" type="checkbox"></input>
+                        </div>
+                        <div>
+                            <label for="bag-order-pink" class="form-labels">Pink</label>
+                            <input id="bag-order-pink" type="checkbox"></input>
+                        </div>
+                        <div>
+                            <label for="bag-order-garden" class="form-labels">Garden</label>
+                            <input id="bag-order-garden" type="checkbox"></input>
+                        </div>
+                        <div>
+                            <label for="bag-order-food" class="form-labels">Food</label>
+                            <input id="bag-order-food" type="checkbox"></input>
+                        </div>
+                    </div>
+                </form>
+            <button class="form-btn">Submit</div>
+            
+    </div>
 </div>
 
 
 <!-- End your code here -->
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/myFormAttempt.js"></script>
 <script type="text/javascript" src="js/reset.js"></script>
 </body>
 </html>
